@@ -196,9 +196,24 @@ script: perl -MTAP::Harness -e 'use utf8; my $harness = TAP::Harness->new( { ver
 	    </section>
 
 	    <section><h1>And there's no API or SDK</h1>
+	      <pre><code>use Text::Markdown;
+sub MAIN( $dir = "txt/", $length = 60 ) {
+    for $dir.IO.dir(:test(/ ".md" $/)) -> $f {
+	my @items =  Text::Markdown::Document.new($f.slurp()).items;
+	say ( @items 
+	      ==> grep( { $^þ ~~ Text::Markdown::CodeBlock } )
+	      ==> map( { .text.split("\n") } )
+	      ==> flat()
+	      ==> grep( { .chars > $length }  )
+	      ==> map( { "‣$f → $^þ\n ⤷ is "~$^þ.chars~" characters long" } )
+	      ==> join( "\n" xx 2 ) );	
+    }
+}</code></pre>
 	      <aside class='notes'>Kindle does not offer either an API
 	      or a SDK that allows you to check stuff offline. You
-		have to upload by hand and hope for the best.</aside>
+		have to upload by hand and hope for the best. And this
+	      is Perl6. A fantastic language you can learn about in
+	      the Perl devroom, or... buying my book!</aside>
 	    </section>
 
 	    
