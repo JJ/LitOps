@@ -114,16 +114,21 @@ upload
 		whatever. Word completion? CTags?</aside>
 	  </section>
 
-	  <section><h1>Manuscript = Markdown + UTF8</h1>
+	  <section data-background='https://farm4.staticflickr.com/3397/3611135927_684ed7a05b_o_d.jpg'><h1>Manuscript = Markdown + UTF8</h1>
 	    <h2 class='fragment'><code>pandoc</code> == <code>vagrant</code> for LitOps</h2>
 	    <aside class='notes'>More than enough for non technical
-	      books, quite adequate for technical books.</aside>
+	      books, quite adequate for technical books. Markdown is
+	      important, because it givew structure to the
+	      code. That's the joke Saint Mark's Dom... MarkDOM, it
+	      creates a DOM for the manuscript. </aside>
 	  </section>
 	</section>
 	
 	<!-- Debugging -->
 	<section>
-	    <section><h1>Debugging → GitHub</h1>
+	  <section data-background='https://farm6.staticflickr.com/5295/5407939690_44f284fa8b_b_d.jpg'
+		   alt='Reviews'>
+	    <h1>Debugging → GitHub</h1>
 	      <aside class='notes'>Not so much a tool, but a framework
 		where you can hang tools to copy-edit collaboratively, to
 		work on a canvas or to release as an open source book,
@@ -131,7 +136,8 @@ upload
 		pull requests.</aside>
 	    </section>
 
-	    <section>
+	    <section data-background='https://farm6.staticflickr.com/5018/5407926218_4dd854722b_b_d.jpg'
+		>
 	      <h1>With enough eyes...</h1>
 	      <h2 class='fragment'>all typos are shallow</h2>
 
@@ -146,7 +152,10 @@ upload
 	  </section>
 
 	  <section>
-	    <section><h1>And continuous integration</h1></section>
+	    <section data-background='https://farm4.staticflickr.com/3073/2723569514_24dc9ecf38_o_d.jpg'>
+	      <h1>And continuous integration</h1>
+	      
+	    </section>
 
 	    <section><pre><code>branches:
   except:
@@ -160,11 +169,10 @@ before_install:
   - echo "use Test::Text;just_check( 'text','/usr/share/hunspell' );" > just_check.t
 install: cpanm  ExtUtils::PkgConfig Test::Text TAP::Harness
 script: perl -MTAP::Harness -e 'use utf8; my $harness = TAP::Harness->new( { verbosity => 0} ); die "FAIL" if  $harness->runtests( "just_check.t" )->failed;'
-		</code>
-	      </pre>
+		</code></pre>
 	    </section>
 
-	    <section><h1>But also...</h1>
+	    <section data-background='https://farm6.staticflickr.com/5561/15317323381_97feaee107_k_d.jpg'><h1>But also...</h1>
 	      <h2 class='fragment'>Vocabulary, <em>entropy</em>,
 		literacy level measures, number of new words.</h2>
 	      <h1 class='fragment'>Enforce style</h1>
@@ -196,6 +204,17 @@ script: perl -MTAP::Harness -e 'use utf8; my $harness = TAP::Harness->new( { ver
 		by Ed Suominen</a></li>
 	    <li><a href='https://www.flickr.com/photos/smithsonian/2422570279/'>Paper
 		and quill from the Smithsonian Institution</a></li>
+
+	    <li><a href='https://www.flickr.com/photos/terwilliger911/2723569514/'>Correcting
+		instruments by Jessie Pearl</a></li>
+	    <li><a href='https://www.flickr.com/photos/cornelluniversitylibrary/3611135927/'>St. Mark's
+		cathedral </a> from Cornell University Library.</li>
+	    <li><a href='https://www.flickr.com/photos/withassociates/5407939690/'>Corrected
+		Manuscript from WithAssociates</a>;
+	      also <a href='https://www.flickr.com/photos/withassociates/5407926218/'>this
+		one</a></li>
+	    <li><a href='https://farm6.staticflickr.com/5561/15317323381_97feaee107_k_d.jpg'>Measuring
+		tape by Travis Wise</a></li>
 	  </ul>
 
 	  
