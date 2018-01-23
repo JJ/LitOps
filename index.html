@@ -22,6 +22,7 @@
      document.getElementsByTagName( 'head' )[0].appendChild( link );
     </script>
   </head>
+
   <body>
     <div class="reveal">
       <div class="slides">
@@ -154,7 +155,12 @@ upload
 	  <section>
 	    <section data-background='https://farm4.staticflickr.com/3073/2723569514_24dc9ecf38_o_d.jpg'>
 	      <h1>And continuous integration</h1>
-	      
+
+	      <aside class='notes'>In fact, this was what got
+	      everything started, using CI to automatically check
+	      spelling, and in fact I used this simple thing to learn
+	      CI in the era before Docker and stuff. I've used it ever
+		since. </aside>
 	    </section>
 
 	    <section><pre><code>branches:
@@ -186,6 +192,14 @@ script: perl -MTAP::Harness -e 'use utf8; my $harness = TAP::Harness->new( { ver
 	      <h1>And... deploy</h1>
 	    </section>
 
+	    <section data-background='https://farm9.staticflickr.com/8170/8053594714_489e1a76ea_h_d.jpg'>
+	      <h1><strike>E</strike>book</h1>
+	      <aside class='notes'>You have to render the MarkDOM in
+	      two different formats: one flexible, with many Unicode
+	      fonts and hypertext-ready, another solid, very few (if
+		any) Unicode fonts and no hypertext.</aside>
+	    </section>
+
 	    <section data-background='https://farm3.staticflickr.com/2748/4256497504_275f3f0605_b_d.jpg'><h1>Paper:</h1>
 	      <h2 class='fragment'>the Internet explorer of the
 		literary world</h2>
@@ -195,7 +209,7 @@ script: perl -MTAP::Harness -e 'use utf8; my $harness = TAP::Harness->new( { ver
 		restrictions... </aside>
 	    </section>
 
-	    <section><h1>And there's no API or SDK</h1>
+	    <section><h2>And there's no API or SDK</h2>
 	      <pre><code>use Text::Markdown;
 sub MAIN( $dir = "txt/", $length = 60 ) {
     for $dir.IO.dir(:test(/ ".md" $/)) -> $f {
@@ -216,7 +230,7 @@ sub MAIN( $dir = "txt/", $length = 60 ) {
 	      the Perl devroom, or... buying my book!</aside>
 	    </section>
 
-	    
+	    <section><h1><strike>hyper</strike> text</h1>
 	  </section>
 	
 	  <section>
@@ -259,6 +273,8 @@ sub MAIN( $dir = "txt/", $length = 60 ) {
 		Stallman by Karl Jonsson</a>.</li>
 	    <li><a href='https://www.flickr.com/photos/88421772@N00/4256497504/'>Rotting
 		books by Aya</a>.</li>
+	    <li><a href='https://www.flickr.com/photos/lacyselfphotography/8053594714/'>Kindle
+		and books by Lacy Self</a></li>
 	  </ul>
 
 	  
