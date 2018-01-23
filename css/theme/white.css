@@ -4,7 +4,7 @@
  * By Hakim El Hattab, http://hakim.se
  */
 
-@import url('https://fonts.googleapis.com/css?family=Space+Mono|Supermercado+One|Work+Sans|Tangerine');
+@import url('https://fonts.googleapis.com/css?family=Space+Mono|Supermercado+One|Work+Sans|Proza Libre');
 
 section.has-dark-background, section.has-dark-background h1, section.has-dark-background h2, section.has-dark-background h3, section.has-dark-background h4, section.has-dark-background h5, section.has-dark-background h6 {
   color: #fff; }
@@ -48,7 +48,7 @@ body {
 .reveal h6 {
   margin: 0 0 20px 0;
   color: #222;
-  font-family: "Work Pro", Helvetica, sans-serif;
+  font-family: "Work Sans", Helvetica, sans-serif;
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: normal;
@@ -60,7 +60,7 @@ body {
     font-size: 3em; }
 
 .reveal h2 {
-    font-family: "Tangerine", cursive;
+    font-family: "Proza Libre", cursive;
   font-size: 2em; }
 
 .reveal h3 {
