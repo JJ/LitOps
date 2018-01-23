@@ -231,6 +231,38 @@ sub MAIN( $dir = "txt/", $length = 60 ) {
 	    </section>
 
 	    <section><h1><strike>hyper</strike> text</h1>
+	      <pre><code>ficheros = glob.glob(dir+"/*.md")
+for f in ficheros:
+    file_content = open(f,"r").read()
+    file_content = re.sub(r'\[([^\]]+)\]\((http[^\(]+)\)',r'\1 → \2', file_content)
+
+    for key in sorted(dict_urls,key=len,reverse=True):
+        file_content = file_content.replace(key, dict_urls[key])
+    f = f.replace('.md','-links.md')
+    with open(f, "w") as links_file:
+        links_file.write( file_content )
+	      </code></pre>
+
+	      <aside class='notes'>There's a (much shorter) Perl6
+	      version for this thing. This is a possible solution to
+	      the hypertext conundrum: get into some URL shortener,
+	      substitute all those URLs, and insert them in the
+	      text. This might create additional problems because of
+		the "solid" and strict nature of lines and page. </aside>
+	    </section>
+	  </section>
+
+	  <section data-background='https://farm3.staticflickr.com/2841/33192745424_143821bd12_k_d.jpg'
+		   alt='climbing'>
+	    <h1>LitOps is in pre-α</h1>
+	    <h2 class='fragment'>Toolchain is yet to arrive</h2>
+	  </section>
+
+	  <section data-background='https://farm9.staticflickr.com/8170/28580198103_6ef6a0b619_k_d.jpg'><h1>Meanwhile</h1>
+	    <h2 class='fragment'>Keep <strike>coding</strike>writing</h2>
+	    <aside class='notes'>Another proof that the Perl world is
+	    amazing, this person was a volunteer at the Perl confernce
+	      in Romania (Cluj-Napoca). He designed and printed the tee himself.</aside>
 	  </section>
 	
 	  <section>
@@ -275,6 +307,9 @@ sub MAIN( $dir = "txt/", $length = 60 ) {
 		books by Aya</a>.</li>
 	    <li><a href='https://www.flickr.com/photos/lacyselfphotography/8053594714/'>Kindle
 		and books by Lacy Self</a></li>
+
+	    <li><a href='https://www.flickr.com/photos/brf/33192745424/'>Climbing
+		by Ben Freeman</a></li>
 	  </ul>
 
 	  
